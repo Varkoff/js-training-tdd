@@ -9,18 +9,23 @@
 
 // Your code:
 
+const sentence = '1337';
+const number = 42;
+const isTrue = false;
+const today = undefined;
+
 //* Begin of tests
 const assert = require('assert');
 
-assert.strictEqual(typeof str, 'string');
-assert.strictEqual(str, '1337');
+assert.strictEqual(typeof sentence, 'string');
+assert.strictEqual(sentence, '1337');
 
-assert.strictEqual(typeof num, 'number');
-assert.strictEqual(num, 42);
+assert.strictEqual(typeof number, 'number');
+assert.strictEqual(number, 42);
 
-assert.strictEqual(typeof bool, 'boolean');
-assert.strictEqual(bool, false);
+assert.strictEqual(typeof isTrue, 'boolean');
+assert.strictEqual(isTrue, false);
 
-assert.strictEqual(typeof undef, 'undefined');
-assert.strictEqual(undef, undefined);
+assert.strictEqual(typeof today, 'undefined');
+assert.strictEqual(today, undefined);
 // End of tests */
