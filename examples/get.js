@@ -1,24 +1,24 @@
-'use strict';
+"use strict";
 
 // First let's declare some data to use in our exemples :
 
 const street = {
   number: 175,
-  type: 'boulevard',
-  name: 'Matabiau',
+  type: "boulevard",
+  name: "Matabiau",
 };
 
 const address = {
-  country: 'France',
-  town: 'Toulouse',
+  country: "France",
+  town: "Toulouse",
   postalCode: 31000,
   street,
 };
 
 const userClement = {
-  firstname: 'Clement',
-  lastname: 'Denis',
-  email: 'cdenis@example.com',
+  firstname: "Clement",
+  lastname: "Denis",
+  email: "cdenis@example.com",
   age: 29,
   address,
 };
@@ -27,26 +27,32 @@ const userClement = {
 const users = [
   userClement,
   {
-    firstname: 'Sofiane',
-    lastname: 'Martinez',
-    email: 'smartine@example.com',
+    firstname: "Sofiane",
+    lastname: "Martinez",
+    email: "smartine@example.com",
     age: 34,
     address: {
-      country: 'France',
-      town: 'St-Ouens',
+      country: "France",
+      town: "St-Ouens",
       postalCode: 93400,
       street: {
         number: 78,
-        type: 'rue',
-        name: 'Garibaldi',
+        type: "rue",
+        name: "Garibaldi",
       },
     },
   },
 ];
 
-const allowedCountries = [ 'France', 'Spain', 'Portugal', 'Russia', 'Iceland' ];
+const allowedCountries = ["France", "Spain", "Portugal", "Russia", "Iceland"];
 
-const coords = [ [ 32, 45 ], [ -38, 57 ], [ 87, 99 ], [ 57, -2 ], [ -74, -29 ] ];
+const coords = [
+  [32, 45],
+  [-38, 57],
+  [87, 99],
+  [57, -2],
+  [-74, -29],
+];
 
 // Ok so now that we have all those structures, let's see how to access values
 // The first way to access value is using square brackets and the key `['key']`
@@ -85,7 +91,7 @@ console.log(coords[3][0]);
 // console.log(coords[151][0])
 
 // Since keys are strings, we can use variables values to access our structures
-const myKey = 'name';
+const myKey = "name";
 
 // and so if we give our brackets an identifier instead of a string
 // It will find the value of it's variable and use that as a key
@@ -100,7 +106,7 @@ console.log(street.myKey);
 
 // In fact you can write anything between those [] as long as it return you
 // a valid string
-console.log(userClement['last' + myKey]);
+console.log(userClement["last" + myKey]);
 
 // You can use operators for Arrays too
 const start = 1;
@@ -119,7 +125,7 @@ console.log(userClement.address.street.name);
 // That's right, console is an Object and 'log' is one of it's property !
 // So you have been using the simplified accessor since the begining
 // We could have written :
-console.log('This is tedious...');
+console.log("This is tedious...");
 // Glad we didn't have to do that.
 
 // But no matter which way we write it, JavaScript will always convert keys
